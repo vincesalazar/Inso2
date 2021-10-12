@@ -661,6 +661,12 @@
                             }
                             .fake-pic {
                                 width: $wimg;
+                                @media(max-width: 1190px){
+                                    width: 11rem;
+                                }
+                                @include mobile(){
+                                    width: 6.7rem;
+                                }
                             }
                         }
                     }
@@ -740,8 +746,9 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                min-height: 100vh;
+                // min-height: 100vh;
                 margin-top: 2rem;
+                margin-bottom: 2rem;
                 form {
                     display: flex;
                     flex-direction: column;
@@ -852,8 +859,8 @@
             color: #ffffffdd;
             font-family: 'Satisfy', cursive;
         }
-        $f-font:1.25rem;
-        $fm-font:3vw;
+        $f-font:1rem;
+        $fm-font:.9rem;
         $f-color: #ffffffdd;
         .cr {
             font-size: $f-font;
@@ -866,7 +873,7 @@
             }
         }
         .flat-icon {
-            font-size: .9rem;
+            font-size: $f-font;
             color: $f-color;
             font-family: Calibri, 'Trebuchet MS', sans-serif;
             font-weight: 100;
