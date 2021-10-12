@@ -38,6 +38,12 @@ body::-webkit-scrollbar {
   width: .55rem;
 }
 
+@media (max-width: 768px) {
+  body::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
 body::-webkit-scrollbar-track {
   background-color: #0f0f0f;
 }
@@ -324,7 +330,7 @@ body .wrapper .icons a img:hover {
 
 @media (max-width: 768px) {
   body .wrapper .icons a img {
-    width: 4.5vw;
+    width: 2rem;
   }
 }
 
@@ -352,9 +358,18 @@ body .spacer-one {
     top: 1rem;
     left: 1rem;
     color: white;
-    font-size: 1vw;
+    font-size: 1rem;
     cursor: pointer;
   }
+}
+
+@media (min-width: 850px) and (max-width: 768px) {
+  body .spacer-one .title {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 850px) {
   body .spacer-one .title:hover {
     text-decoration: underline;
   }
@@ -382,9 +397,18 @@ body .spacer-two {
     top: 1rem;
     left: 1rem;
     color: white;
-    font-size: 1vw;
+    font-size: 1rem;
     cursor: pointer;
   }
+}
+
+@media (min-width: 850px) and (max-width: 768px) {
+  body .spacer-two .title {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 850px) {
   body .spacer-two .title:hover {
     text-decoration: underline;
   }
@@ -431,9 +455,18 @@ body .spacer-four {
     top: 1rem;
     left: 1rem;
     color: white;
-    font-size: 1vw;
+    font-size: 1rem;
     cursor: pointer;
   }
+}
+
+@media (min-width: 850px) and (max-width: 768px) {
+  body .spacer-four .title {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 850px) {
   body .spacer-four .title:hover {
     text-decoration: underline;
   }
@@ -653,7 +686,7 @@ body .content .listen .container .row {
 }
 
 body .content .listen .container .row .col img {
-  width: 15rem;
+  width: 17rem;
   cursor: pointer;
   -webkit-transition: -webkit-transform .2s;
   transition: -webkit-transform .2s;
@@ -661,7 +694,7 @@ body .content .listen .container .row .col img {
   transition: transform .2s, -webkit-transform .2s;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1190px) {
   body .content .listen .container .row .col img {
     width: 11rem;
   }
@@ -674,12 +707,12 @@ body .content .listen .container .row .col img:hover {
 
 @media (max-width: 768px) {
   body .content .listen .container .row .col img {
-    width: 2rem;
+    width: 6.7rem;
   }
 }
 
 body .content .listen .container .row .col .fake-pic {
-  width: 14rem;
+  width: 17rem;
 }
 
 body .content footer {
@@ -839,13 +872,14 @@ body .form container form input[type="email"]::placeholder, body .form container
   font-family: 'Lato', sans-serif;
 }
 
+body .form container form input[type="email"]:hover, body .form container form input[type="text"]:hover {
+  border-bottom: white 0.05rem solid;
+}
+
 @media (max-width: 768px) {
   body .form container form input[type="email"], body .form container form input[type="text"] {
     font-size: 1.5vw;
     margin-bottom: 1.5em;
-  }
-  body .form container form input[type="email"]:hover, body .form container form input[type="text"]:hover {
-    border-bottom: white 0.05rem solid;
   }
 }
 
@@ -871,13 +905,14 @@ body .form container form textarea:focus {
   outline: white 0.1px solid;
 }
 
+body .form container form textarea:hover {
+  outline: white 0.1px solid;
+}
+
 @media (max-width: 768px) {
   body .form container form textarea {
     font-size: 2vw;
     resize: vertical;
-  }
-  body .form container form textarea:hover {
-    outline: white 0.1px solid;
   }
   body .form container form textarea::-webkit-input-placeholder {
     color: #ffffffaa;
@@ -916,6 +951,13 @@ body .form container form input[type="submit"] {
   font-family: 'Satisfy', cursive;
 }
 
+body .form container form input[type="submit"]:hover {
+  border: 1px white solid;
+  -webkit-animation: animation 2s forwards;
+          animation: animation 2s forwards;
+  color: white;
+}
+
 @media (max-width: 768px) {
   body .form container form input[type="submit"] {
     font-size: 2vw;
@@ -925,12 +967,6 @@ body .form container form input[type="submit"] {
     border-bottom: 1px #ffffff55 solid;
     -webkit-transition: all .1s;
     transition: all .1s;
-  }
-  body .form container form input[type="submit"]:hover {
-    border: 1px white solid;
-    -webkit-animation: animation 2s forwards;
-            animation: animation 2s forwards;
-    color: white;
   }
   @-webkit-keyframes animation {}
   @keyframes animation {}

@@ -6,6 +6,7 @@
     14,
     0.977);
     // media mixins
+    $m480: 480px;
     $mobile: 768px;
     $laptop:850px;
     @mixin mobile {
@@ -16,6 +17,12 @@
     
     @mixin laptop {
         @media (min-width: $laptop) {
+            @content;
+        }
+    }
+
+    @mixin m480 {
+        @media (max-width: $m480) {
             @content;
         }
     }
@@ -53,6 +60,9 @@
         overflow-x: hidden;
         &::-webkit-scrollbar {
             width: .55rem;
+            @include mobile(){
+                width: 0;
+            }
         }
         &::-webkit-scrollbar-track {
             background-color: #0f0f0f;
@@ -410,7 +420,7 @@
                             filter: invert(1);
                         }
                         @include mobile() {
-                            width: 4.5vw;
+                            width: 2rem;
                         }
                     }
                 }
@@ -426,7 +436,10 @@
                 top: 1rem;
                 left: 1rem;
                 color: white;
-                font-size: 1vw;
+                font-size: 1rem;
+                @include mobile(){
+                    font-size: 1rem;
+                }
                 cursor: pointer;
                 &:hover {
                     text-decoration: underline;
@@ -634,19 +647,20 @@
                         display: flex;
                         justify-content: space-between;
                         .col {
+                            $wimg: 17rem;
                             img {
-                                width: 15rem;
+                                width: $wimg;
                                 cursor: pointer;
-                                @media(max-width: 1180px){
+                                @media(max-width: 1190px){
                                     width: 11rem;
                                 }
                                 @include hoverY();
-                                @include mobile() {
-                                    width: 2rem;
+                                @include mobile(){
+                                    width: 6.7rem;
                                 }
                             }
                             .fake-pic {
-                                width: 14rem;
+                                width: $wimg;
                             }
                         }
                     }
@@ -763,12 +777,12 @@
                             color: #ffffffaa;
                             font-family: 'Lato', sans-serif;
                         }
+                        &:hover{
+                            border-bottom: rgb(255, 255, 255) .05rem solid;
+                        }
                         @include mobile() {
                             font-size: 1.5vw;
                             margin-bottom: 1.5em;
-                            &:hover{
-                                border-bottom: rgb(255, 255, 255) .05rem solid;
-                            }
                         }
                     }
                     textarea {
@@ -789,12 +803,12 @@
                         &:focus {
                             outline: white 0.1px solid;
                         }
+                        &:hover {
+                            outline: white 0.1px solid;
+                        }
                         @include mobile() {
                             font-size: 2vw;
                             resize: vertical;
-                            &:hover {
-                                outline: white 0.1px solid;
-                            }
                             &::placeholder {
                                 color: #ffffffaa;
                                 font-family: 'Lato', sans-serif;
@@ -816,6 +830,11 @@
                         border-right: 1px #ffffffaa solid;
                         border-bottom: 1px #ffffffaa solid;
                         font-family: 'Satisfy', cursive;
+                        &:hover {
+                            border: 1px white solid;
+                            animation: animation 2s forwards;
+                            color: white;
+                        }
                         @include mobile() {
                             font-size: 2vw;
                             border-top: 1px #ffffffaa solid;
@@ -823,11 +842,6 @@
                             border-right: 1px #ffffff55 solid;
                             border-bottom: 1px #ffffff55 solid;
                             transition: all .1s;
-                            &:hover {
-                                border: 1px white solid;
-                                animation: animation 2s forwards;
-                                color: white;
-                            }
                             @keyframes animation {}
                         }
                     }
