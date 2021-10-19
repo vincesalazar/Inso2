@@ -102,6 +102,10 @@
                 background-color: #ffffffd0;
                 padding: 2px;
                 margin-top: 7rem;
+                @include mobile(){
+                    width: 1.55rem;
+                    height: 1.55rem;
+                }
                 .box {
                     height: 100%;
                     width: 0;
@@ -420,7 +424,7 @@
                             filter: invert(1);
                         }
                         @include mobile() {
-                            width: 2rem;
+                            width: 1.5rem;
                         }
                     }
                 }
@@ -648,6 +652,7 @@
                         justify-content: space-between;
                         .col {
                             $wimg: 17rem;
+                            $wmimg:4.7rem;
                             img {
                                 width: $wimg;
                                 cursor: pointer;
@@ -656,7 +661,7 @@
                                 }
                                 @include hoverY();
                                 @include mobile(){
-                                    width: 6.7rem;
+                                    width: $wmimg;
                                 }
                             }
                             .fake-pic {
@@ -665,7 +670,7 @@
                                     width: 11rem;
                                 }
                                 @include mobile(){
-                                    width: 6.7rem;
+                                    width: $wmimg;
                                 }
                             }
                         }
@@ -855,6 +860,7 @@
                 }
             }
         }
+        /* **** END FORM **** */
         #contact span {
             color: #ffffffdd;
             font-family: 'Satisfy', cursive;
@@ -885,4 +891,3 @@
             }
         }
     }
-    /* **** END FORM **** */

@@ -32,6 +32,7 @@ body {
   overflow-x: hidden;
   /* some random element in dom, it's a wierd error */
   /* **** FORM MADE IN CODEPEN WITH SCSS ***** */
+  /* **** END FORM **** */
 }
 
 body::-webkit-scrollbar {
@@ -96,6 +97,13 @@ body .load-page .spinner {
   background-color: #ffffffd0;
   padding: 2px;
   margin-top: 7rem;
+}
+
+@media (max-width: 768px) {
+  body .load-page .spinner {
+    width: 1.55rem;
+    height: 1.55rem;
+  }
 }
 
 body .load-page .spinner .box {
@@ -330,7 +338,7 @@ body .wrapper .icons a img:hover {
 
 @media (max-width: 768px) {
   body .wrapper .icons a img {
-    width: 2rem;
+    width: 1.5rem;
   }
 }
 
@@ -707,7 +715,7 @@ body .content .listen .container .row .col img:hover {
 
 @media (max-width: 768px) {
   body .content .listen .container .row .col img {
-    width: 6.7rem;
+    width: 4.7rem;
   }
 }
 
@@ -723,7 +731,7 @@ body .content .listen .container .row .col .fake-pic {
 
 @media (max-width: 768px) {
   body .content .listen .container .row .col .fake-pic {
-    width: 6.7rem;
+    width: 4.7rem;
   }
 }
 
@@ -1020,6 +1028,4 @@ body .flat-icon a {
     font-size: 0.9rem;
   }
 }
-
-/* **** END FORM **** */
 /*# sourceMappingURL=main.css.map */
