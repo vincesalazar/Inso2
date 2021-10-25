@@ -708,12 +708,18 @@ body .content .listen .container .row .col img {
   }
 }
 
+@media (max-width: 762px) {
+  body .content .listen .container .row .col img {
+    width: 8rem;
+  }
+}
+
 body .content .listen .container .row .col img:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   body .content .listen .container .row .col img {
     width: 4.7rem;
   }

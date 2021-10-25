@@ -659,9 +659,16 @@
                                 @media(max-width: 1190px){
                                     width: 11rem;
                                 }
+                                @media(max-width: 762px){
+                                    width: 8rem;
+                                }
                                 @include hoverY();
                                 @include mobile(){
+                                    
+                                }
+                                @include m480(){
                                     width: $wmimg;
+
                                 }
                             }
                             .fake-pic {
