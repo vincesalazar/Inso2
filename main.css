@@ -1010,7 +1010,7 @@ body .cr {
 
 @media (max-width: 768px) {
   body .cr {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
   }
 }
 
@@ -1031,7 +1031,7 @@ body .flat-icon a {
 
 @media (max-width: 768px) {
   body .flat-icon {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

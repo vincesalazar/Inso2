@@ -22,7 +22,7 @@ wordLoad.to(".load-page h5", { opacity: .7, duration: .3 });
 wordLoad.to(".load-page h5", { letterSpacing: ".1rem", duration: 10 }, "<");
 wordLoad.to(".load-page h5", { text: "just trying to inspire", duration: 2 }, "<+1");
 wordLoad.to(".load-page h5", { text: "inso" }, ">+2")
-wordLoad.to(".load-page h5", { duration: .3, opacity: 0 });
+wordLoad.to(".load-page h5", { duration: .3, opacity: 0 })
 
 // ******* MODAL *******
 function modal(id) {
